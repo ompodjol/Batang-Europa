@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Batang Europa Basketball - Register{% endblock %}
+
+{% block content %}
+    <section class="page-header">
+        <div class="container">
+            <h1>Register with Batang Europa</h1>
+            <p>Join our basketball family</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="registration-wrapper">
+                <div class="registration-info">
+                    <h2>Why Join Batang Europa?</h2>
+                    <ul class="benefits-list">
+                        <li>✓ Professional coaching from experienced mentors</li>
+                        <li>✓ Access to top-class training facilities</li>
+                        <li>✓ Competitive tournaments and matches</li>
+                        <li>✓ Scholarship opportunities for talented players</li>
+                        <li>✓ Strong community of basketball enthusiasts</li>
+                        <li>✓ International exposure and networking</li>
+                    </ul>
+                </div>
+
+                <form class="registration-form">
+                    <h2>Registration Form</h2>
+
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input type="number" id="age" name="age" min="8" max="80" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Height (cm) *</label>
+                            <input type="number" id="height" name="height" placeholder="e.g., 180" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Preferred Position *</label>
+                        <select id="position" name="position" required>
+                            <option value="">-- Select Position --</option>
+                            <option value="pg">Point Guard</option>
+                            <option value="sg">Shooting Guard</option>
+                            <option value="sf">Small Forward</option>
+                            <option value="pf">Power Forward</option>
+                            <option value="c">Center</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Experience Level *</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">-- Select Level --</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team">Current Team (if any)</label>
+                        <input type="text" id="team" name="team" placeholder="Leave blank if none">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">What are your basketball goals?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your passion for basketball..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="terms" required>
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Subscribe to our newsletter for updates
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button">Register Now</button>
+                </form>
+            </div>
+
+            <div class="registration-faq" style="margin-top: 4rem;">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h4>What is the age requirement?</h4>
+                        <p>Players can register from age 8 onwards. We have programs for youth, junior, and senior categories.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>When does the season start?</h4>
+                        <p>The regular season starts in September. Training camps begin in August. Check our schedule page for detailed dates.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is previous experience required?</h4>
+                        <p>No! We welcome players of all skill levels. We have coaches to help you develop regardless of your experience.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What are the membership fees?</h4>
+                        <p>Please contact us for detailed pricing information. We offer scholarships for talented players with financial need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

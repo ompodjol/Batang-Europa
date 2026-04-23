@@ -1,0 +1,28 @@
+# Docker Compose Configuration for local development and production
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "1981:1981"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
+    volumes:
+      - .:/app
+    restart: unless-stopped
+
+  # Optional: Add database service
+  # db:
+  #   image: postgres:13
+  #   environment:
+  #     POSTGRES_DB: batang_europa
+  #     POSTGRES_USER: admin
+  #     POSTGRES_PASSWORD: password
+  #   volumes:
+  #     - db_data:/var/lib/postgresql/data
+
+# volumes:
+#   db_data:
